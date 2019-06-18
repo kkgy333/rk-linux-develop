@@ -4,6 +4,13 @@ The full source code can be downloaded here
 https://1drv.ms/u/s!AqG2uRmVUhlShgzS_EXfVt_-54AU?e=H7zzpS 
 ```
 ## build respeaker v2 linux kernel
+
+Modify the path to the cross-compile toolchain. Default is my own path
+```
+baozhu@bz:~/workspace/respeaker/rk-linux-develop$ cat .CC 
+#CC=/usr/bin/arm-linux-gnueabihf-
+CC=/home/baozhu/workspace/respeaker/rk-linux-develop/tools/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
+```
 ```
 ./build/mk-kernel.sh
 ```
